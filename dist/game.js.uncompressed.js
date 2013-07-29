@@ -1976,21 +1976,23 @@ define([
     return anims;
   }
 
-  //setup a GameCore instance
-  var game = new GameCore({
-    canvasId: 'canvas',
-    gameAreaId: 'gameArea',
-    // canvasPercentage: 0.95,
-    update: update,
-    draw: draw,
-    anims: createAnimations(50, frozenjs, 250)
-  });
+  setTimeout(function(){
+      //setup a GameCore instance
+      var game = new GameCore({
+        canvasId: 'canvas',
+        gameAreaId: 'gameArea',
+        // canvasPercentage: 0.95,
+        update: update,
+        draw: draw,
+        anims: createAnimations(50, frozenjs, 250)
+      });
 
-  //if you want to take a look at the game object in dev tools
-  console.log(game);
+      //if you want to take a look at the game object in dev tools
+      console.log(game);
 
-  //launch the game!
-  game.run();
+      //launch the game!
+      game.run();
+  }, 1000);
 
 });
 },
